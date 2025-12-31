@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website OSIS - Sekolah XYZ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header dengan Navigasi -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo OSIS">
+                <h1>OSIS Sekolah XYZ</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#agenda">Agenda Rapat</a></li>
+                    <li><a href="#dokumentasi">Dokumentasi</a></li>
+                    <li><a href="#struktur">Struktur Organisasi</a></li>
+                    <li><a href="#filosofi">Filosofi Nawasena</a></li>
+                    <li><a href="#radio">Radio Player</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Beranda -->
+    <section id="beranda" class="hero">
+        <div class="container">
+            <h2>Selamat Datang di Website OSIS</h2>
+            <p>Mewujudkan generasi muda yang berprestasi dan berkarakter.</p>
+            <a href="#agenda" class="btn-primary">Lihat Agenda</a>
+        </div>
+    </section>
+
+    <!-- Section Agenda Rapat -->
+    <section id="agenda" class="section">
+        <div class="container">
+            <h2>Agenda Rapat</h2>
+            <div class="agenda-list">
+                <div class="agenda-item">
+                    <h3>Rapat Bulanan OSIS</h3>
+                    <p>Tanggal: 15 Oktober 2023 | Jam: 14:00 - 16:00</p>
+                    <button class="btn-detail" onclick="showDetail('Rapat untuk membahas program kerja bulan depan.')">Detail</button>
+                </div>
+                <div class="agenda-item past">
+                    <h3>Rapat Evaluasi Kegiatan</h3>
+                    <p>Tanggal: 1 Oktober 2023 | Jam: 13:00 - 15:00</p>
+                    <button class="btn-detail" onclick="showDetail('Evaluasi kegiatan olahraga sekolah.')">Detail</button>
+                </div>
+                <!-- Tambahkan lebih banyak item -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Dokumentasi Kegiatan -->
+    <section id="dokumentasi" class="section">
+        <div class="container">
+            <h2>Dokumentasi Kegiatan</h2>
+            <div class="gallery">
+                <div class="gallery-item" onclick="openModal('assets/images/kegiatan1.jpg', 'Deskripsi kegiatan 1')">
+                    <img src="assets/images/kegiatan1.jpg" alt="Kegiatan 1">
+                </div>
+                <!-- Tambahkan lebih banyak item -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal untuk Dokumentasi -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" src="" alt="">
+        <p id="modal-desc"></p>
+    </div>
+
+    <!-- Section Struktur Organisasi -->
+    <section id="struktur" class="section">
+        <div class="container">
+            <h2>Struktur Organisasi</h2>
+            <div class="org-structure">
+                <div class="member">
+                    <img src="assets/images/pengurus1.jpg" alt="Ketua OSIS">
+                    <h3>John Doe</h3>
+                    <p>Ketua OSIS</p>
+                    <p>Email: john@osis.com</p>
+                </div>
+                <div class="member">
+                    <img src="assets/images/pengurus2.jpg" alt="Wakil Ketua">
+                    <h3>Jane Smith</h3>
+                    <p>Wakil Ketua</p>
+                    <p>Email: jane@osis.com</p>
+                </div>
+                <!-- Tambahkan lebih banyak member -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Filosofi Nawasena -->
+    <section id="filosofi" class="section">
+        <div class="container">
+            <h2>Filosofi Nawasena</h2>
+            <p>Nawasena adalah falsafah hidup yang dianut oleh Organisasi Siswa Intra Sekolah (OSIS) di Indonesia. Nawasena berasal dari kata "nawa" yang berarti sembilan dan "sena" yang berarti senjata. Sembilan senjata ini melambangkan sembilan sifat utama yang harus dimiliki oleh seorang siswa OSIS, yaitu: kejujuran, keberanian, kesetiaan, keadilan, ketekunan, kerjasama, kepemimpinan, kecintaan terhadap ilmu, dan kecintaan terhadap tanah air.</p>
+            <p>Filosofi ini menginspirasi siswa untuk menjadi pemimpin yang bertanggung jawab dan berkontribusi positif bagi masyarakat.</p>
+        </div>
+    </section>
+
+    <!-- Section Radio Player -->
+    <section id="radio" class="section">
+        <div class="container">
+            <h2>Radio Player OSIS</h2>
+            <div class="radio-player">
+                <audio id="audio-player" controls>
+                    <source src="assets/audio/lagu-osis.mp3" type="audio/mpeg">
+                    Browser Anda tidak mendukung audio.
+                </audio>
+                <div class="track-info">
+                    <p id="track-title">Lagu OSIS - Judul Lagu</p>
+                    <p id="track-duration">Durasi: 3:45</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 OSIS Sekolah XYZ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
